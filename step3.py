@@ -80,7 +80,7 @@ class step3(object):
             return pricegpu, namegpu
         if self.graphic == 'ASUS strix RTX 3070 - 34.000.000':
             pricegpu = pricegpu+34000000
-            namegpu = 'SUS strix RTX 3070'
+            namegpu = 'ASUS strix RTX 3070'
             return pricegpu, namegpu
         if self.graphic == 'Nvidia RTX 3080 - 38.500.000':
             pricegpu = pricegpu+38500000
