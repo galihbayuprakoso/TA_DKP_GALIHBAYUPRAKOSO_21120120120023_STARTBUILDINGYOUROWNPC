@@ -25,14 +25,6 @@ class step1(object):
             messagebox.showerror("BUDGET","MASUKKAN NOMINAL ANGKA")
             lbbdgterror = Label (text = "*Masukkan nominal angka", fg="red", bg="cyan").place(x = 525, y = 70)
             return
-        #if radio.get()== 0:
-            #messagebox.showerror("Error","BELUM MEMILIH JENIS KELAMIN")
-            #return
-        #elif radio.get() == 1:
-            #perkenalan="Mas "
-        #elif radio.get() == 2:
-            #perkenalan="Mbak "
-
             
         #button state
         btn1 = Button(command = step1, text="SUBMIT", state="disable").place(x=820,y=47)
@@ -120,7 +112,6 @@ class step1(object):
             case = ttk.Combobox( width = 35, textvariable = strcase, state="disable")
             case.place(x=570, y=180)
 
-
             #money calculations (total)
             totalprice = pricemthr+pricecpu+pricegpu+priceram+pricepsu+pricecase
             
@@ -146,19 +137,14 @@ class step1(object):
             lbpsu = Label(text = "PSU\t\t:", fg="grey", bg="cyan").place(x=30, y=180)
             lbcase = Label(text = "Case\t\t:", fg="grey", bg="cyan").place(x=450, y=180)
             
-
             #step4 customer
             lbbill = Label (text = "Builder", font = "font 10 bold italic ",  bg="cyan").place(x = 30, y = 220)
             lbcsname = Label (text = "Nama \t\t: " + str(self.nama1), bg="cyan").place(x=30, y=250)
             lbcsbudget = Label (text = "Budget \t\t: Rp. " + str(mon.getmoney3()) + ",-", bg="cyan").place(x=30, y=270)
 
-
             #output color
             color = step4(totalprice, bdgt)
 
-
-                #lbover = Label(text = "Budget tidak mencukupi (- Rp. " + str(mon.getmoney2()) + ",-)", fg =clr, bg="cyan").place(x=30, y=430)
-                #return
             #step4 spec
             lbspec = Label (text = "Spesifikasi PC", font = "font 10 bold italic ",  bg="cyan").place(x=30, y=300)
             lbusrmthr = Label(text = "Motherboard\t: " + namemthr, fg=color.getclr(), bg="cyan" ).place(x=30, y=330)
@@ -173,9 +159,6 @@ class step1(object):
             lbtotal = Label (text = "Total harga PC \t: Rp. " + str(mon.getmoney1()) + ",-",fg=color.getclr(), bg="cyan").place(x=30, y=490)
             color.lackofmoney()
             color.amountofmoney()
-            
-            #pesan = "Halo " + strmthr.get() + strcpu.get() + strgpu.get() + strram.get() + strpsu.get()+ strcase.get() +budget.get() + "!!!"
-            #messagebox.showinfo("Greeting", pesan)
             
             #button state
             btn2 = Button(command = spec, text="SUBMIT", state="disable").place(x=820,y=178)

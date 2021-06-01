@@ -8,9 +8,6 @@ from money import money
 from step4 import step4
 
 
-
-        
-
 top = Tk()  
 top.geometry("900x600")
 top.resizable(False,False)
@@ -30,11 +27,6 @@ inama = Entry(top,width = 45, textvariable=nama).place(x = 110, y = 50)
 budget = StringVar()
 ibudget = Entry(width = 45, textvariable=budget).place(x = 530, y = 50)
 
-#create radio
-#radio = IntVar()
-#R1 = Radiobutton(top, text="Pria", variable=radio, value=1).place(x=105, y=40)  
-#R2 = Radiobutton(top, text="Wanita", variable=radio, value=2).place(x=105, y=60)  
-#R3 = Radiobutton(top, text="Tidak ingin memberitahu", variable=radio, value=3).place(x=105, y=80)  
 
 def runstep1():
     nama1 = nama.get()
@@ -43,13 +35,9 @@ def runstep1():
     openstep1 = step1(nama1, budget1)
     openstep1.usrbudget()
     return
+
 #create button
 btn1 = Button(command = runstep1, text="SUBMIT").place(x=820,y=47)
-
-
-
-
-
 
 
 top.mainloop()    
